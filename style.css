@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.type {
+  padding: 50px;
+  font-size: 2em;
+}
+
+.type .char {
+  visibility: hidden;
+  animation: animate 0s steps(2) forwards;
+  animation-delay: calc(0.04s * var(--char-index));
+}
+
+@keyframes animate {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
